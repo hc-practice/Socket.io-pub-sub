@@ -1,46 +1,44 @@
 ![CF](http://i.imgur.com/7v5ASc8.png) LAB
 =================================================
 
-## Project Name
+## Socket.io & React (L39)
 
-### Author: Student/Group Name
+### Author: Heather Cherewaty
+#### Collaborated with:  Becca Lee & Brent Woodward
 
 ### Links and Resources
-* [repo](http://xyz.com)
-* [travis](http://xyz.com)
-* [back-end](http://xyz.com) (when applicable)
-* [front-end](http://xyz.com) (when applicable)
-
-#### Documentation
-* [swagger](http://xyz.com) (API assignments only)
-* [jsdoc](http://xyz.com) (All assignments)
+* [Q server repo](https://github.com/hcherewaty/q-server-hc)
+* [API server repo](https://github.com/hcherewaty/api_server)
+* [Q server deployed](https://qserver-hc.herokuapp.com)
+* [API server deployed](https://api-server-hc.herokuapp.com)
+* [Code Sandbox](https://codesandbox.io/s/r7rv0pmj74) 
 
 ### Modules
-#### `modulename.js`
+#### `index.js`
 ##### Exported Values and Methods
-
-###### `foo(thing) -> string`
-Usage Notes or examples
-
-###### `bar(array) -> array`
-Usage Notes or examples
 
 ### Setup
 #### `.env` requirements
-* `PORT` - Port Number
-* `MONGODB_URI` - URL to the running mongo instance/db
+* `PORT` - defined in ENV if running locally.
+* `MONGODB_URI` - defined in ENV if running locally, otherwise defined in deployed config vars.
 
 #### Running the app
-* `npm start`
-* Endpoint: `/foo/bar/`
-  * Returns a JSON object with abc in it.
-* Endpoint: `/bing/zing/`
-  * Returns a JSON object with xyz in it.
+* Q server: `node server.js`
+* API server: `node index.js`
+* Visit code sandbox link defined in links and resources
+* In a new terminal window, run the following commands using httpie:
+    * For teams model:
+        * POST:   `echo '{"name":"Test"}' | http post <API address>/api/v1/teams`
+        * PUT:    `echo '{"name":"TESTING"}' | http put <API address>/api/v1/teams/<insert id here>`
+        * DELETE: `http delete <API address>/api/v1/teams/<insert id here>`
+    * For players model:
+        * POST:   `echo '{"name":"Heather","position":"P","throws":"R","bats":"R","team":"meows"}' | http post <API address>/api/v1/players`
+        * PUT:    `echo '{"name":"Heather","position":"P","throws":"L","bats":"L","team":"woofs"}' | http put <API address>/api/v1/players/<insert id here>`
+        * DELETE: `http delete <API address>/api/v1/players/<insert id here>`
+
   
 #### Tests
-* How do you run tests?
-* What assertions were made?
-* What assertions need to be / should be made?
-
-#### UML
-Link to an image of the UML for your application and response to events
+* Tests run within code sandbox.
+* Asserted valid components exist.
+* Asserted elements exist upon component mount.
+* Asserted elements created on state change are do not exist unless state change occurs.
