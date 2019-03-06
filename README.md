@@ -1,7 +1,4 @@
-![CF](http://i.imgur.com/7v5ASc8.png) LAB
-=================================================
-
-## Socket.io & React (L39)
+## Socket.io & React
 
 ### Author: Heather Cherewaty
 #### Collaborated with:  Becca Lee & Brent Woodward
